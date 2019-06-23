@@ -1,0 +1,77 @@
+.login-form {
+    display: grid;
+    grid-template-columns: .5fr repeat(3, 1fr) .5fr;
+    grid-template-areas: 
+        '. h h h .'
+        '. u u u .'
+        '. p p p .'
+        '. b b b .';
+}
+
+.header-logo {
+    grid-area: h;
+    text-align: center;
+    margin-top: 110px;
+}
+
+.username {
+    grid-area: u;
+}
+
+.password {
+    grid-area: p;
+}
+
+.buttons {
+    grid-area: b;
+    display: grid;
+    width: 290px;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        'b1 . b2';
+}
+
+.button1 {
+    grid-area: b1;
+}
+
+.button2 {
+    grid-area: b2;
+}
+
+button {
+    width: 125px;
+    height: 45px;
+    font-size: 26px;
+    margin: 20px auto 0;
+}
+
+.username, .password {
+    label {
+        padding-right: 180px;
+        padding-bottom: 10px;
+        display: block;
+    }
+    text-align: center;
+    margin: 20px 0;
+    font-size: 25px;
+
+    input {
+        width: 278px;
+        height: 40px;
+    }
+}
+
+@media only screen and (min-width: 500px ){
+
+    .login-form {
+        grid-template-areas: 
+            ' . . . . .'
+            '. h h h .'
+            '. u u u .'
+            '. p p p .'
+            '. . b . .';
+    }
+}
+
