@@ -1,0 +1,26 @@
+$main-dark-color: #2F4550;
+$main-light-color: #FCD0A1;
+$input-color: #E1E1E1;
+
+body {
+    background-color: $main-dark-color;
+    color: $main-light-color;
+}
+
+button {
+    background-color: $main-light-color;
+    color: $main-dark-color;
+    border-radius: 6px;
+    a {
+        color: $main-dark-color;
+        text-decoration: none;
+    }
+    a:hover {
+        color: $main-dark-color;
+    }
+}
+
+input {
+    background: $input-color;
+    border-radius: 9px;
+}
