@@ -10,17 +10,31 @@ body {
 button {
     background-color: $main-light-color;
     color: $main-dark-color;
-    border-radius: 6px;
+    border-radius: 6px;  
     a {
         color: $main-dark-color;
         text-decoration: none;
     }
+    
     a:hover {
         color: $main-dark-color;
     }
 }
 
+a {
+    color: $main-light-color;
+    text-decoration: none;
+}
+
+a:hover {
+    color: $main-light-color;
+}
+
 input {
     background: $input-color;
     border-radius: 9px;
+}
+
+.hidden {
+    display: none;
 }
