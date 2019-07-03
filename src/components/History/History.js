@@ -64,7 +64,7 @@ export class History extends Component {
                 this.state.sortedWorkouts[workouts].forEach((workout, i) => {
                     allWorkoutDivs.push(
                         <div key={workout.id} className='exercise-wrapper'>
-                            <span className='exercise-details'> - {workout.exercise} {workout.rep} x {workout.weight}</span>
+                            <span className='exercise-details'> - {workout.exercise} {workout.rep} x {workout.weight}lbs</span>
                         </div>
                     )
                 });
