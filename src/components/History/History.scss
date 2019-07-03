@@ -1,0 +1,19 @@
+$main-light-color: #FCD0A1;
+
+
+.exercise-wrapper{
+    padding: 5px;
+    margin-left: 10%;
+    font-size: 19px;
+}
+
+.date-div {
+    margin: 10px 15px 10px;
+    padding-bottom: 3px;
+    border-bottom: 4px solid $main-light-color;
+    display: inline-block;
+}
+
+.history-header {
+    margin-left: 10px;
+}
