@@ -23,6 +23,7 @@ class App extends Component {
     fire.auth().onAuthStateChanged((user) => {
       if (user) {
         this.setState({ user });
+        sessionStorage.setItem('userEmail', user['email']);
       } else {
         this.setState({ user: null });
       }
@@ -30,7 +31,6 @@ class App extends Component {
   }
 
   logout = () => {
-    this.toggleNavigation();
     fire.auth().signOut();
   }
 
@@ -41,7 +41,7 @@ class App extends Component {
         { this.state.user ? (
           <div>
            < Navigation logout={this.logout} />
-           < Landing />
+           < Landing user={this.state.user} />
           </div>
         ) : (
           <div>
