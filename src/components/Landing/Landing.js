@@ -14,15 +14,29 @@ export class Landing extends Component {
 
     submit = (e) => {
         e.preventDefault();
-        fire.firestore().collection("exercises").add({
+        const email = this.props.user['email'];
+        const dateNow = new Date();
+        const dateLong = dateNow.toLocaleDateString('en-US' ,{ weekday: "long", year: "numeric", month: "short", day: "numeric" });
+
+        fire.firestore().collection(email).add({
             exercise: this.state.exercise,
             rep: this.state.rep,
             weight: this.state.weight,
-        }).then((res) =>{
-            console.log('res', res);
+            created: dateLong,
+            id: dateNow
+        }).then((res) => {
+            this.resetState();
         }).catch((error) => {
             console.log(error);
         })
+    }
+
+    resetState = () => {
+        this.setState({
+            exercise: '',
+            rep: '',
+            weight: '',
+        });
     }
 
     handleChange = (e) => {
