@@ -5,6 +5,7 @@ import App from './App';
 import { Route, BrowserRouter as Router } from 'react-router-dom'
 import Registration from './components/Registration/Registration';
 import Login from './components/Login/Login';
+import History from './components/History/History';
 
 
 const routing = (
@@ -13,6 +14,7 @@ const routing = (
         <Route exact path="/" component={App} />
         <Route path="/register" component={Registration} />
         <Route path="/signin" component={Login} />
+        <Route path="/history" component={History} />
       </div>
     </Router>
   )
