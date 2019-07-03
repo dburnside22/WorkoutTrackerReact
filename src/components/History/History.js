@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './History.scss'
 import Navigation from '../Navigation/Navigation';
 import fire from '../../config/Fire';
-import reverse from 'reverse-object-order';
 
 export class History extends Component {
     constructor(props) {
@@ -47,13 +46,12 @@ export class History extends Component {
 
         let sortedWorkouts = groupByDates(this.state.workouts);
         
-        const reversesWorkoutOrder = reverse(sortedWorkouts);
 
 
 
 
         this.setState({
-            sortedWorkouts: reversesWorkoutOrder,
+            sortedWorkouts: sortedWorkouts,
         })
     }
 
