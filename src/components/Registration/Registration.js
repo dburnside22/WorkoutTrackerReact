@@ -68,7 +68,7 @@ export class Registration extends Component {
                     <input type="password" name="confirmPassword" value={this.state.confirmPassword} onChange={this.handleChange} />
                 </div>
                 <div className="buttons">
-                    <button className="button2"> <Link to={'/signin'}>Sign Up</Link></button>
+                    <button className="button2" onClick={this.signup}>Sign Up</button>
                 </div>
             </form>
         )

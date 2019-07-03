@@ -15,7 +15,7 @@ export class Login extends Component {
     }
     
     login = () => {
-        const usernamePlusDomain = this.state.username + '@workoutTracker.com'
+        const usernamePlusDomain = this.state.username + '@workoutTracker.com';
         fire.auth().signInWithEmailAndPassword(usernamePlusDomain, this.state.password)
             .then((user) => {
                 window.location = '/';
@@ -52,7 +52,7 @@ export class Login extends Component {
                 </div>
                 <div className="buttons">
                     <button className="button1"><Link to={'/register'}>Sign Up</Link></button>
-                    <button className="button2"><Link to={'/'}>Sign In</Link></button>  
+                    <button className="button2" onClick={this.login}><Link to={'/'}>Sign In</Link></button>  
                 </div>
             </form>
 
