@@ -21,7 +21,6 @@ export class Registration extends Component {
             const usernamePlusDomain = this.state.username + '@workoutTracker.com';
             fire.auth().createUserWithEmailAndPassword(usernamePlusDomain, this.state.password)
                 .then((user) => {
-                    console.log(user);
                     window.location = '/signin';
                 })
                 .catch((error) => {
@@ -30,7 +29,7 @@ export class Registration extends Component {
                         alert('user already exist');
                         window.location = '/signin';
                     }
-                })
+                });
         }
     }
 
