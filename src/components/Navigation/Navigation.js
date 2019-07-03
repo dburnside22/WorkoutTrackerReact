@@ -7,7 +7,7 @@ export class Navigation extends Component {
     state = {
         navClicked: false
     };
-    
+
 
     toggleNavigation = () => {
         this.setState({
@@ -37,7 +37,7 @@ export class Navigation extends Component {
                         <li> <Link to={'/'} onClick={this.toggleNavigation}>Home</Link></li>
                         <li> <Link to={'/history'} onClick={this.toggleNavigation}>History</Link></li>
                         <li> <Link to={'/calendar'} onClick={this.toggleNavigation}>Calendar</Link></li>
-                        <li> <Link to={'/signin'} onClick={this.toggleNavigation}>Logout</Link></li>
+                        <li> <Link to={'/signin'} onClick={this.props.logout}>Logout</Link></li>
                     </nav>
                     <div className='dark-overlay'></div>
                 </div>
