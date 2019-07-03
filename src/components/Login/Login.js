@@ -14,7 +14,8 @@ export class Login extends Component {
         }
     }
     
-    login = () => {
+    login = (e) => {
+        e.preventDefault();
         const usernamePlusDomain = this.state.username + '@workoutTracker.com';
         fire.auth().signInWithEmailAndPassword(usernamePlusDomain, this.state.password)
             .then((user) => {
@@ -30,7 +31,7 @@ export class Login extends Component {
     handleKeyPress = (e) => {
         if (e.key === 'Enter') {
             e.preventDefault();
-            this.login();
+            this.login(e);
         }
     }
 

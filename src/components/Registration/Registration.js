@@ -13,7 +13,9 @@ export class Registration extends Component {
         }
     }
 
-    signup = () => {
+    signup = (e) => {
+        console.log('hit');
+        e.preventDefault();
         if (this.state.password !== this.state.confirmPassword){
             alert('Passwords dont match!');
             this.resetPasswordState();
@@ -43,7 +45,7 @@ export class Registration extends Component {
     handleKeyPress = (e) => {
         if (e.key === 'Enter') {
             e.preventDefault();
-            this.signup();
+            this.signup(e);
         }
     }
 
